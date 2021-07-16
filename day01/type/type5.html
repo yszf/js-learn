@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML =
+            typeof "john" + "<br>" + // string
+            typeof 3.14 + "<br>" +  // number
+            typeof NaN + "<br>" + // number
+            typeof false + "<br>" + // boolean
+            typeof [1, 2, 3, 4] + "<br>" + // object
+            typeof { name: 'john', age: 34 } + "<br>" + // object
+            typeof new Date() + "<br>" + // object
+            typeof function () { } + "<br>" + // function
+            typeof myCar + "<br>" + // undefined
+            typeof null; // object
+    </script>
+
+</body>
+
+</html>

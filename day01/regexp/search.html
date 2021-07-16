@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
+    <button onclick="myFunction()">点我</button>
+    <p id="demo"></p>
+    <script>
+        /* 
+        正则表达式可用于所有文本搜索和文本替换的操作。
+        语法：
+        /正则表达式主体/修饰符(可选)
+        其中修饰符是可选的。
+
+        实例：
+        var patt = /runoob/i
+        实例解析：
+
+        /runoob/i  是一个正则表达式。
+
+        runoob  是一个正则表达式主体 (用于检索)。
+
+        i  是一个修饰符 (搜索不区分大小写)。
+        */
+        function myFunction() {
+            var str = "Visit Runoob!";
+            var n = str.search(/Runoob/i);
+            document.getElementById("demo").innerHTML = n;
+        }
+    </script>
+
+</body>
+
+</html>
