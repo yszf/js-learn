@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <script>
+        async function asyncFunc() {
+            let value = await new Promise(
+                function (resolve, reject) {
+                    resolve("Return value");
+                }
+            );
+            console.log(value);
+        }
+        asyncFunc();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <script>
+        // resolve() 中可以放置一个参数用于向下一个 then 传递一个值，then 中的函数也可以返回一个值传递给 then。但是，如果 then 中返回的是一个 Promise 对象，那么下一个 then 将相当于对这个返回的 Promise 进行操作
+        new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log("First");
+                resolve();
+            }, 1000);
+        }).then(function () {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    console.log("Second");
+                    resolve();
+                }, 4000);
+            });
+        }).then(function () {
+            setTimeout(function () {
+                console.log("Third");
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <h2>JavaScript <b>this</b> 关键字</h2>
+
+    <p>实例中，<b>this</b> 表示 myFunction 函数的所有者：</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 在函数中，函数的所属者默认绑定到 this 上。
+        // 在浏览器中，window 就是该全局对象为 [object Window]
+        document.getElementById("demo").innerHTML = myFunction();
+        function myFunction() {
+            return this;
+        }
+    </script>
+
+</body>
+
+</html>

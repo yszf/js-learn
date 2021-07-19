@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(function () {
+            console.log("First");
+            setTimeout(function () {
+                console.log("Second");
+                setTimeout(function () {
+                    console.log("Third");
+                }, 3000);
+            }, 4000);
+        }, 1000);
+    </script>
+</body>
+
+</html>

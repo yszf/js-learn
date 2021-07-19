@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        // 两者的区别在于第二个参数： apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。
+
+        // 在 JavaScript 严格模式(strict mode)下, 在调用函数时第一个参数会成为 this 的值， 即使该参数不是一个对象。
+
+        // 在 JavaScript 非严格模式(non-strict mode)下, 如果第一个参数的值是 null 或 undefined, 它将使用全局对象替代。
+
+        // Note	通过 call() 或 apply() 方法你可以设置 this 的值, 且作为已存在对象的新方法调用。
+        var myObject, myArray;
+        function myFunction(a, b) {
+            return a * b;
+        }
+        myArray = [10, 2]
+        myObject = myFunction.apply(myObject, myArray);      // 返回 20
+        document.getElementById("demo").innerHTML = myObject; // 20
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <h2>JavaScript 箭头函数</h2>
+
+    <p>箭头函数不需要使用 function、return 关键字及大括号 {}。</p>
+
+    <p>IE11 及更早 IE 版本不支持箭头函数。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 有的箭头函数都没有自己的 this。 不适合定义一个 对象的方法。
+
+        // 当我们使用箭头函数的时候，箭头函数会默认帮我们绑定外层 this 的值，所以在箭头函数中 this 的值和外层的 this 是一样的。
+
+        // 箭头函数是不能提升的，所以需要在使用之前定义。
+
+        // 使用 const 比使用 var 更安全，因为函数表达式始终是一个常量。
+        const x = (x, y) => x * y;
+        document.getElementById("demo").innerHTML = x(5, 5); // 25
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <script>
+        function print(delay, message) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    console.log(message);
+                    resolve();
+                }, delay);
+            });
+        }
+
+        print(1000, "First").then(function () {
+            return print(4000, "Second");
+        }).then(function () {
+            print(3000, "Third");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <h2>JavaScript <b>this</b> 关键字</h2>
+
+    <p>实例中，<b>this</b> 指向了 window 对象:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 严格模式下，如果单独使用，this 也是指向全局(Global)对象。
+        "use strict";
+        var x = this;
+        document.getElementById("demo").innerHTML = x; // [object Window]
+    </script>
+
+</body>
+
+</html>

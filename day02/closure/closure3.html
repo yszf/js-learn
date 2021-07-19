@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <p>局部变量计数。</p>
+    <button type="button" onclick="myFunction()">计数!</button>
+    <p id="demo">0</p>
+    <script>
+        /*
+        变量 add 指定了函数自我调用的返回字值。
+
+        自我调用函数只执行一次。设置计数器为 0。并返回函数表达式。
+
+        add变量可以作为一个函数使用。非常棒的部分是它可以访问函数上一层作用域的计数器。
+
+        这个叫作 JavaScript 闭包。它使得函数拥有私有变量变成可能。
+
+        计数器受匿名函数的作用域保护，只能通过 add 方法修改。
+
+        Note
+        闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰。
+
+        直观的说就是形成一个不销毁的栈环境。
+        */
+        var add = (function () {
+            var counter = 0;
+            return function () { return counter += 1; }
+        })();
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+        }
+    </script>
+
+</body>
+
+</html>
