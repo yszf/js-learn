@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script>
+        document.write(location.href+"<br>");
+        document.write(location.pathname+"<br>");
+        // location.assign() 方法加载新的文档。
+        function newDoc() {
+        //  window.location.assign("https://www.runoob.com")
+            window.location.replace("https://www.runoob.com")
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="加载新文档" onclick="newDoc()">
+</body>
+
+</html>

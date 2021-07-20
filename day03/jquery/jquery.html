@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script>
+    <script>
+        // 当您向 jQuery 传递 DOM 对象时，jQuery 会返回以 HTML DOM 对象包装的 jQuery 对象。
+
+        // jQuery 函数会返回新的 jQuery 对象，其中的 ready() 是一个方法。
+
+        // 由于在 JavaScript 中函数就是变量，因此可以把 myFunction 作为变量传递给 jQuery 的 ready 方法。
+
+        // jQuery 返回 jQuery 对象，与已传递的 DOM 对象不同。
+        // jQuery 对象拥有的属性和方法，与 DOM 对象的不同。
+        // 您不能在 jQuery 对象上使用 HTML DOM 的属性和方法。
+        function myFunction() {
+            $("#h01").html("Hello jQuery")
+        }
+        $(document).ready(myFunction);
+    </script>
+</head>
+
+<body>
+
+    <h1 id="h01"></h1>
+
+</body>
+
+</html>
